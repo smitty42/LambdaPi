@@ -485,6 +485,6 @@ var base64 = {
     },
     b64decode: function(str)
 	{
-		return $.base64.decode(data);
+		return $.base64.decode(str);
     }
 };
