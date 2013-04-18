@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>iPhone Sim</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+    <script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+</head>
+<body>
+	<div class="iphone_4s_device">
+		<div class="iphone_4s_display">
+		</div>
+		<div class="iphone_4s_display_sans_battery_bar">
+           <br><br><br>
+           <div class="button"></div>
+		   
+		   <div id="placeholder" style="width:640px;height:300px;background-color:white;">ghjgjghjgkj</div>
+		</div>
+	</div>
+</body>
+ <script type="text/javascript">
+$(function () {
+
+    var data = [[0, 3], [1, 8], [3, 5], [4, 13],
+				[5, 3], [6, 8], [7, 5], [8, 13],
+				[9, 3], [10, 8], [12, 5], [13, 13]];
+
+
+    
+    $.plot($("#placeholder"), [ data, ]);
+});
+</script>
+</html>
