@@ -1,0 +1,84 @@
+/* Start of white_box_gray_border system
+###################################################################################################
+*/
+.white_box_gray_border {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 500px;
+    height: 20px;
+    background-color: white;
+    z-index: 2;
+}
+.white_box_gray_border_top_left {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_top_left.png');
+    background-repeat: no-repeat;
+}
+.white_box_gray_border_top_right {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_top_right.png');
+    background-repeat: no-repeat;
+}
+.white_box_gray_border_bottom_right {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_bottom_right.png');
+    background-repeat: no-repeat;
+}
+.white_box_gray_border_bottom_left {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_bottom_left.png');
+    background-repeat: no-repeat;
+}
+.white_box_gray_border_top_edge {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    width: 100%;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_top_edge.png');
+    background-repeat: repeat-x;
+}
+.white_box_gray_border_right_edge {
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    width: 40px;
+    height: 100%;
+    background: url('../img/white_box_gray_border/white_box_gray_border_right_edge.png');
+    background-repeat: repeat-y;
+}
+.white_box_gray_border_bottom_edge {
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
+    width: 100%;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_bottom_edge.png');
+    background-repeat: repeat-x;
+}
+.white_box_gray_border_left_edge {
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: url('../img/white_box_gray_border/white_box_gray_border_left_edge.png');
+    background-repeat: repeat-y;
+}
