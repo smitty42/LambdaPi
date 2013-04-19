@@ -14,7 +14,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 550px;
+    width: 580px;
     overflow: auto;
     z-index: 2;
 }
@@ -46,7 +46,7 @@
     position: absolute;
     top: 0px;
     left: 40px;
-    width: 470px;
+    width: 500px;
     height: 40px;
     background: url('../img/white_box_gray_border/white_box_gray_border_top_edge.png');
     background-repeat: repeat-x;
@@ -56,7 +56,7 @@
     position: absolute;
     bottom: 0px;
     left: 40px;
-    width: 470px;
+    width: 500px;
     height: 40px;
     background: url('../img/white_box_gray_border/white_box_gray_border_bottom_edge.png');
     background-repeat: repeat-x;
@@ -65,7 +65,7 @@
 .accordion_row {
     position: relative;
     left: 0px;
-    width: 550px;
+    width: 580px;
     height: 80px;
     z-index: 2;
 }
@@ -183,7 +183,7 @@
     position: absolute;
     font:24px arial, sans-serif;
     top: 30px;
-    left: 80px;
+    left: 50px;
     width: 320;
     height: 40px;
     z-index: 4;

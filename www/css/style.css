@@ -1,7 +1,9 @@
 body {
     background-color: white;
 }
-
+textarea:focus, input:focus{
+    outline: none;
+}
 .iphone_4s_device {
     position: absolute;
     top: 0px;
@@ -46,4 +48,23 @@ body {
     width:640px;
     height:300px;
     background-color:white;
+}
+
+.text_field {
+    position:absolute;
+    top: -22px;
+    left: 5px;
+    width: 420px;
+    height: 60px;
+    line-height:60px;
+	font-size: 24pt;
+}
+
+.search_botton {
+    position:absolute;
+    top: -18px;
+    right: -18px;
+    width: 60px;
+    height: 60px;
+    background-image:url('../img/search-button-without-text-md.png');
 }
