@@ -2,89 +2,199 @@
 <html>
 <head>
 	<title>iPhone Sim</title>
-	<link type="text/css" rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/white_box.css">
-    <link type="text/css" rel="stylesheet" href="css/accordion.css">
-    <script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
-    <script language="javascript" type="text/javascript" src="js/spin.min.js"></script>
-    <script language="javascript" type="text/javascript" src="js/pythonic_functions.js"></script>
-    <script language="javascript" type="text/javascript" src="js/variables.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/white_box.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/spin.min.js"></script>
+    <script type="text/javascript" src="js/pythonic_functions.js"></script>
+    <script type="text/javascript" src="js/variables.js"></script>
 </head>
 <body>
 	<div class="iphone_4s_device">
-		<div class="iphone_4s_display">
-		</div>
+		<div class="iphone_4s_display"></div>
 		<div class="iphone_4s_display_sans_battery_bar">
-    
-    <div id="veil" class="iphone_4s_veil">
-		<div id="iphone_4s_veil_text">Processing</div>
-		<div id="iphone_4s_spinner"></div>
-    </div>
-    
-    <div class="toolbar"></div>
-    
-    <div class='white_box_gray_border'>
-        <div class='white_box_gray_border_top_left'></div>
-        <div class='white_box_gray_border_top_right'></div>
-        <div class='white_box_gray_border_bottom_right'></div>
-        <div class='white_box_gray_border_bottom_left'></div>
-        <div class='white_box_gray_border_top_edge'></div>
-        <div class='white_box_gray_border_right_edge'></div>
-        <div class='white_box_gray_border_bottom_edge'></div>
-        <div class='white_box_gray_border_left_edge'></div>
-        <input type="text" class="text_field" name="lastname">
-        <div id="search" class="search_botton"></div>
-    </div>
 
-            
-	<div id="data_table" class="accordion_scroll_container">
-		<div class="accordion_menu_box">
-		    <div class="accordion_top_edge"></div>
-		    <div class="accordion_top_left"></div>
-		    <div class="accordion_top_right"></div>
-		    
-		    <div class="accordion_row">
-		        <div class="accordion_row_left_edge_top"></div>
-			<div class="accordion_row_right_edge_top"></div>
-                        <div class="white_bg_top"></div>
-			<div class="accordion_row_text_box">Total Computation Time</div>
-		    </div>
-		    
-		    <div id="insert_rows">
-		      
-		        <div class="accordion_row row_border white_bg">
-		            <div class="accordion_row_left_edge row_border"></div>
-		       	    <div class="accordion_row_right_edge row_border"></div> 
-			    <div class="accordion_row_text_box">Amount of Data Processed</div>
-		        </div>
-
-		    <!-- /insert_rows -->
-		    </div>
-		    <div class="accordion_row row_border">
-		        <div class="accordion_row_left_edge_bottom"></div>
-			<div class="accordion_row_right_edge_bottom"></div> 
-			<div class="white_bg_bottom"></div>
-			<div class="accordion_row_text_box"></div>
-		    </div>
-
-		    <div class="accordion_bottom_edge"></div>
-		    <div class="accordion_bottom_left"></div>
-		    <div class="accordion_bottom_right"></div>
-		</div>
-		</div>
+            <div id="veil" class="iphone_4s_veil">
+                <div id="iphone_4s_veil_text">Processing</div>
+                <div id="iphone_4s_spinner"></div>
+            </div>
         
-		   
-		   <div id="placeholder"></div>
-		   
-		   <div class="tab_menu">
-		       <div class="tab_menu_text">Made By <br> Global Data Sciences, Inc.</div>
-		   </div>
-		   
+            <div class="toolbar">
+                <div class="toolbar_text">Find in Pi</div>
+                <div id="back_button" class="toolbar_back_button">Back</div>
+            </div>
+        
+            <div id="search_box" class='white_box_gray_border'>
+                <div class='white_box_gray_border_top_left'></div>
+                <div class='white_box_gray_border_top_right'></div>
+                <div class='white_box_gray_border_bottom_right'></div>
+                <div class='white_box_gray_border_bottom_left'></div>
+                <div class='white_box_gray_border_top_edge'></div>
+                <div class='white_box_gray_border_right_edge'></div>
+                <div class='white_box_gray_border_bottom_edge'></div>
+                <div class='white_box_gray_border_left_edge'></div>
+                <input type="text" class="text_field" name="lastname">
+                <div id="search" class="search_botton"></div>
+            </div>
+
+            <div id="large_table" class="accordion_scroll_container">
+                <div class="accordion_menu_box">
+                    <div class="accordion_top_edge"></div>
+                    <div class="accordion_top_left"></div>
+                    <div class="accordion_top_right"></div>
+                    
+                    <div class="accordion_row">
+                        <div class="accordion_row_left_edge_top"></div>
+                        <div class="accordion_row_right_edge_top"></div>
+                        <div class="white_bg_top"></div>
+                        <div class="accordion_row_text_box">Total Computation Time</div>
+                         <div class="right_side_text">1234</div>
+                    </div>
+                    
+                    <div id="insert_rows">
+                      
+                        <div class="accordion_row row_border white_bg">
+                            <div class="accordion_row_left_edge row_border"></div>
+                            <div class="accordion_row_right_edge row_border"></div> 
+                            <div class="accordion_row_text_box">Amount of Data Processed</div>
+                            <div class="right_side_text">1234</div>
+                        </div>
+                        <div class="accordion_row row_border white_bg">
+                            <div class="accordion_row_left_edge row_border"></div>
+                            <div class="accordion_row_right_edge row_border"></div> 
+                            <div class="accordion_row_text_box">Amount of Data Processed</div>
+                             <div class="right_side_text">1234</div>
+                        </div>
+                        <div class="accordion_row row_border white_bg">
+                            <div class="accordion_row_left_edge row_border"></div>
+                            <div class="accordion_row_right_edge row_border"></div> 
+                            <div class="accordion_row_text_box">Amount of Data Processed</div>
+                             <div class="right_side_text">1234</div>
+                        </div>
+                        <div class="accordion_row row_border white_bg">
+                            <div class="accordion_row_left_edge row_border"></div>
+                            <div class="accordion_row_right_edge row_border"></div> 
+                            <div class="accordion_row_text_box">Amount of Data Processed</div>
+                             <div class="right_side_text">1234</div>
+                        </div>
+                        <div class="accordion_row row_border white_bg">
+                            <div class="accordion_row_left_edge row_border"></div>
+                            <div class="accordion_row_right_edge row_border"></div> 
+                            <div class="accordion_row_text_box">Amount of Data Processed</div>
+                             <div class="right_side_text">1234</div>
+                        </div>
+
+                    <!-- /insert_rows -->
+                    </div>
+                    <div class="accordion_row row_border">
+                        <div class="accordion_row_left_edge_bottom"></div>
+                        <div class="accordion_row_right_edge_bottom"></div> 
+                        <div class="white_bg_bottom"></div>
+                        <div class="accordion_row_text_box">Amount of Data Processed</div>
+                        <div class="right_side_text">1234</div>
+                    </div>
+
+                    <div class="accordion_bottom_edge"></div>
+                    <div class="accordion_bottom_left"></div>
+                    <div class="accordion_bottom_right"></div>
+                </div>
+            </div>
+                
+            <div id="data_table" class="accordion_scroll_container">
+                <div class="accordion_menu_box">
+                    <div class="accordion_top_edge"></div>
+                    <div class="accordion_top_left"></div>
+                    <div class="accordion_top_right"></div>
+                    
+                    <div class="accordion_row">
+                        <div class="accordion_row_left_edge_top"></div>
+                        <div class="accordion_row_right_edge_top"></div>
+                        <div class="white_bg_top"></div>
+                        <div class="accordion_row_text_box">Total Computation Time</div>
+                        <div class="right_side_text">4567484</div>
+                    </div>
+                    
+                    <div id="insert_rows">
+                      
+                        <div class="accordion_row row_border white_bg">
+                            <div class="accordion_row_left_edge row_border"></div>
+                            <div class="accordion_row_right_edge row_border"></div> 
+                            <div class="accordion_row_text_box">Amount of Data Processed</div>
+                            <div class="right_side_text">987654321</div>
+                        </div>
+
+                    <!-- /insert_rows -->
+                    </div>
+                    <div class="accordion_row row_border">
+                        <div class="accordion_row_left_edge_bottom"></div>
+                        <div class="accordion_row_right_edge_bottom"></div> 
+                        <div class="white_bg_bottom"></div>
+                        <div class="accordion_row_text_box">More Details</div>
+                        <div class="right_side_text">></div>
+                        <div id="more_data" class="action_div"></div>
+                    </div>
+
+                    <div class="accordion_bottom_edge"></div>
+                    <div class="accordion_bottom_left"></div>
+                    <div class="accordion_bottom_right"></div>
+                </div>
+            </div>
+            
+            <div id="graph_box" class='white_box_for_graph'>
+                <div class='white_box_gray_border_top_left'></div>
+                <div class='white_box_gray_border_top_right'></div>
+                <div class='white_box_gray_border_bottom_right'></div>
+                <div class='white_box_gray_border_bottom_left'></div>
+                <div class='white_box_gray_border_top_edge'></div>
+                <div class='white_box_gray_border_right_edge'></div>
+                <div class='white_box_gray_border_bottom_edge'></div>
+                <div class='white_box_gray_border_left_edge'></div>
+                <div class="placeholder_text">Occurrences/node</div>
+                <div id="placeholder"></div>
+            </div>
+            
+            <div class="tab_menu">
+               <div class="tab_menu_text">Made By <br> Global Data Sciences, Inc.</div>
+            </div>
 		</div>
 	</div>
 </body>
  <script type="text/javascript">
+function show_spinner()
+{
+    $('#veil').show();
+    spinner.spin(target);
+    var veil_timer = setTimeout(stop_spinner,1000);
+}
+function stop_spinner()
+{
+    spinner.stop();
+    $('#data_table').show();
+    $('#veil').hide();
+    $('#placeholder').show();
+    $('#graph_box').show();
+}
+function show_large_table()
+{
+    $('#graph_box').hide();
+    $('#data_table').hide();
+    $('#search_box').hide();
+    $('#placeholder').hide();
+    $('#back_button').show();
+    $('#large_table').show();
+}
+function hide_large_table()
+{
+    $('#graph_box').show();
+    $('#data_table').show();
+    $('#search_box').show();
+    $('#placeholder').show();
+    $('#back_button').hide();
+    $('#large_table').hide();
+}  
+     
 var opts = {
   lines: 13, // The number of lines to draw
   length: 20, // The length of each line
@@ -106,16 +216,18 @@ var opts = {
 var target = document.getElementById('iphone_4s_spinner');
 var spinner = new Spinner(opts);
 
+$("#back_button").click(function() {
+    hide_large_table();
+});
 $("#search").click(function() {
-    $('#data_table').show();
-    $('#veil').show();
-    spinner.spin(target);
+    show_spinner();
+});
+$("#more_data").click(function() {
+    show_large_table();
 });
  
 $(function () {
 	
-
-
     var dic = {"data point #1":1.23456789};
     var encoded_data = base64.b64encode(json.dumps(dic));
     var url = "http://" + server_address + "/search?substring=" + encoded_data;
@@ -130,15 +242,6 @@ $(function () {
         }
     );
 });
-
-
-
-
-
-
-
-
-
 
 </script>
 </html>

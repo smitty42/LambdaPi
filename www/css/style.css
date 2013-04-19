@@ -25,6 +25,13 @@ textarea:focus, input:focus{
     opacity: 0.8;
     display: none;
 }
+#sliding_frame {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 640px;
+    height: 48px;
+}
 #iphone_4s_veil_text {
     position: absolute;
     text-align:center;
@@ -50,6 +57,33 @@ textarea:focus, input:focus{
     height: 88px;
     background-image:url('../img/toolbar_background.png');
     background-repeat:repeat-x;
+}
+.toolbar_text {
+    position: absolute;
+    text-align:center;
+    font-size:40pt;
+    line-height:44px;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    height: 98px;
+    z-index: 2;
+}
+.toolbar_back_button {
+    position: absolute;
+    text-align:center;
+    font-size:24pt;
+    line-height:44px;
+    top: 20px;
+    left: 15px;
+    width: 100px;
+    height: 44px;
+    border-radius: 10px;
+    border-width:1px;
+    border-style:solid;
+    border-color: gray;
+    display: none;
+    z-index: 5;
 }
 .tab_menu {
     position: absolute;
@@ -96,13 +130,21 @@ textarea:focus, input:focus{
     background-repeat: no-repeat;
     zoom: 200%;
 }
-
+.placeholder_text {
+    position: absolute;
+    font:24px arial, sans-serif;
+    top: -18px;
+    left: 10px;
+    width: %100;
+    height: 40px;
+}
 #placeholder {
     position:absolute;
-    top:500px;
-    width:600px;
-    height:300px;
+    top:20px;
+    width:500px;
+    height:200px;
     background-color:white;
+    display: none;
 }
 
 .text_field {

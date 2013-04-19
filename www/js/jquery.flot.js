@@ -81,8 +81,8 @@
                     twelveHourClock: false // 12 or 24 time in time mode
                 },
                 yaxis: {
-                    autoscaleMargin: 0.02,
-                    position: "left" // or "right"
+                    autoscaleMargin: 1,
+                    position: "right" // or "right"
                 },
                 xaxes: [],
                 yaxes: [],
@@ -123,7 +123,7 @@
                     tickColor: null, // color for the ticks, e.g. "rgba(0,0,0,0.15)"
                     labelMargin: 5, // in pixels
                     axisMargin: 8, // in pixels
-                    borderWidth: 2, // in pixels
+                    borderWidth: 1, // in pixels
                     minBorderMargin: null, // in pixels, null means taken from points radius
                     markings: null, // array of ranges or fn: axes -> array of ranges
                     markingsColor: "#f4f4f4",
