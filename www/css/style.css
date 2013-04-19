@@ -39,3 +39,203 @@ body {
     background-repeat: no-repeat;
     zoom: 200%;
 }
+
+#placeholder {
+    position:absolute;
+    top:300px;
+    width:640px;
+    height:300px;
+    background-color:white;
+}
+
+
+/* Start of accordion menu system
+###################################################################################################
+*/
+.accordion_scroll_container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 590px;
+    height: 600px;
+    overflow: auto;
+    z-index: 2;
+}
+.accordion_menu_box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 550px;
+    overflow: auto;
+    z-index: 2;
+}
+.row_border {
+    border-top: 2px solid #a0a1a3;
+}
+.white_bg {
+    background-color: white;
+}
+.white_bg_top {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 1;
+    background-color: white;
+}
+.white_bg_bottom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 1;
+    background-color: white;
+}
+.accordion_top_edge {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    width: 470px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_top_edge.png');
+    background-repeat: repeat-x;
+    z-index: 0;
+}
+.accordion_bottom_edge {
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+    width: 470px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_bottom_edge.png');
+    background-repeat: repeat-x;
+    z-index: 0;
+}
+.accordion_row {
+    position: relative;
+    left: 0px;
+    width: 550px;
+    height: 80px;
+    z-index: 2;
+}
+.accordion_row_left_edge_top {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_left_edge.png');
+    background-repeat: repeat-y;
+    z-index: 2;
+}
+.accordion_row_right_edge_top {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_right_edge.png');
+    background-repeat: repeat-y;
+    z-index: 2;
+}
+.accordion_row_left_edge_bottom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_left_edge.png');
+    background-repeat: repeat-y;
+    z-index: 2;
+}
+.accordion_row_right_edge_bottom {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_right_edge.png');
+    background-repeat: repeat-y;
+    z-index: 2;
+}
+.accordion_row_left_edge {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    width: 40px;
+    height: 100%;
+    background: url('../img/white_box_gray_border/white_box_gray_border_left_edge.png');
+    background-repeat: repeat-y;
+    z-index: 2;
+}
+.accordion_row_right_edge {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    width: 40px;
+    height: 100%;
+    background: url('../img/white_box_gray_border/white_box_gray_border_right_edge.png');
+    background-repeat: repeat-y;
+    z-index: 2;
+}
+.accordion_top_left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_top_left.png');
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+.accordion_top_right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_top_right.png');
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+.accordion_bottom_right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_bottom_right.png');
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.accordion_bottom_left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/white_box_gray_border/white_box_gray_border_bottom_left.png');
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.black_plus_icon {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    background: url('../img/black_plus_icon.png');
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+.accordion_row_text_box {
+    position: absolute;
+    font:24px arial, sans-serif;
+    top: 30px;
+    left: 80px;
+    width: 320;
+    height: 40px;
+    z-index: 4;
+}
