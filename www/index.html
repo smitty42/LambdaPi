@@ -5,29 +5,76 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css">
     <script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="js/pythonic_functions.js"></script>
+    <script language="javascript" type="text/javascript" src="js/variables.js"></script>
 </head>
 <body>
 	<div class="iphone_4s_device">
 		<div class="iphone_4s_display">
 		</div>
 		<div class="iphone_4s_display_sans_battery_bar">
-           <br><br><br>
-           <div class="button"></div>
+            
+            
+	<div class="accordion_scroll_container">
+		<div class="accordion_menu_box">
+		    <div class="accordion_top_edge"></div>
+		    <div class="accordion_top_left"></div>
+		    <div class="accordion_top_right"></div>
+		    
+		    <div class="accordion_row">
+		        <div class="accordion_row_left_edge_top"></div>
+			<div class="accordion_row_right_edge_top"></div>
+                        <div class="white_bg_top"></div>
+			<div class="accordion_row_text_box">Some Sample Text</div>
+		    </div>
+		    
+		    <div id="insert_rows">
+		      
+		        <div class="accordion_row row_border white_bg">
+		            <div class="accordion_row_left_edge row_border"></div>
+		       	    <div class="accordion_row_right_edge row_border"></div> 
+			    <div class="accordion_row_text_box">Some Sample Text</div>
+		        </div>
+
+		    <!-- /insert_rows -->
+		    </div>
+		    <div class="accordion_row row_border">
+		        <div class="accordion_row_left_edge_bottom"></div>
+			<div class="accordion_row_right_edge_bottom"></div> 
+			<div class="white_bg_bottom"></div>
+			<div class="black_plus_icon">
+			    <a id="test" onClick="add_row();" class="fill_div"></a>  
+			</div>
+			<div class="accordion_row_text_box"></div>
+		    </div>
+
+		    <div class="accordion_bottom_edge"></div>
+		    <div class="accordion_bottom_left"></div>
+		    <div class="accordion_bottom_right"></div>
+		</div>
+		</div>
+        
 		   
-		   <div id="placeholder" style="width:640px;height:300px;background-color:white;">ghjgjghjgkj</div>
+		   <div id="placeholder" ></div>
 		</div>
 	</div>
 </body>
  <script type="text/javascript">
 $(function () {
 
-    var data = [[0, 3], [1, 8], [3, 5], [4, 13],
-				[5, 3], [6, 8], [7, 5], [8, 13],
-				[9, 3], [10, 8], [12, 5], [13, 13]];
-
-
-    
-    $.plot($("#placeholder"), [ data, ]);
+    var dic = {"data point #1":1.23456789};
+    var encoded_data = base64.b64encode(json.dumps(dic));
+    var url = "http://" + server_address + "/search?substring=" + encoded_data;
+    $.ajax({
+            url:url,
+            context: document.body
+        }).done(function(b64_data) {
+            
+            var json_string = base64.b64decode(b64_data);
+            var ghraph_data_obj = json.loads(json_string);
+            $.plot($("#placeholder"), [ ghraph_data_obj, ]);
+        }
+    );
 });
 </script>
 </html>

@@ -22,7 +22,11 @@ class PycloudMiddleman(tornado.web.RequestHandler):
     def get(s):
         sub = s.get_argument('substring')
         sub = base64.b64decode(str(sub))
-        return s.write(str(sub))
+        data = [[0, 3], [1, 8], [3, 5], [4, 13],
+                [5, 3], [6, 8], [7, 5], [8, 13],
+				[9, 3], [10, 8], [12, 5], [13, 13]];
+        
+        return s.write(base64.b64encode(json.dumps(data)))
 
 def read_picloud_file():
     start = time.time()
