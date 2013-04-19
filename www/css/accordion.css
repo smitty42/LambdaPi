@@ -3,12 +3,13 @@
 */
 .accordion_scroll_container {
     position: absolute;
-    top: 150px;
+    top: 230px;
     left: 30px;
     width: 590px;
     height: 600px;
     overflow: auto;
     z-index: 2;
+    display: none;
 }
 .accordion_menu_box {
     position: absolute;

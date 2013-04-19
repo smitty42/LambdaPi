@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/accordion.css">
     <script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="js/spin.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/pythonic_functions.js"></script>
     <script language="javascript" type="text/javascript" src="js/variables.js"></script>
 </head>
@@ -16,6 +17,12 @@
 		</div>
 		<div class="iphone_4s_display_sans_battery_bar">
     
+    <div id="veil" class="iphone_4s_veil">
+		<div id="iphone_4s_veil_text">Processing</div>
+		<div id="iphone_4s_spinner"></div>
+    </div>
+    
+    <div class="toolbar"></div>
     
     <div class='white_box_gray_border'>
         <div class='white_box_gray_border_top_left'></div>
@@ -27,11 +34,11 @@
         <div class='white_box_gray_border_bottom_edge'></div>
         <div class='white_box_gray_border_left_edge'></div>
         <input type="text" class="text_field" name="lastname">
-        <div class="search_botton"></div>
+        <div id="search" class="search_botton"></div>
     </div>
 
             
-	<div class="accordion_scroll_container">
+	<div id="data_table" class="accordion_scroll_container">
 		<div class="accordion_menu_box">
 		    <div class="accordion_top_edge"></div>
 		    <div class="accordion_top_left"></div>
@@ -41,7 +48,7 @@
 		        <div class="accordion_row_left_edge_top"></div>
 			<div class="accordion_row_right_edge_top"></div>
                         <div class="white_bg_top"></div>
-			<div class="accordion_row_text_box">Some Sample Text</div>
+			<div class="accordion_row_text_box">Total Computation Time</div>
 		    </div>
 		    
 		    <div id="insert_rows">
@@ -49,7 +56,7 @@
 		        <div class="accordion_row row_border white_bg">
 		            <div class="accordion_row_left_edge row_border"></div>
 		       	    <div class="accordion_row_right_edge row_border"></div> 
-			    <div class="accordion_row_text_box">Some Sample Text</div>
+			    <div class="accordion_row_text_box">Amount of Data Processed</div>
 		        </div>
 
 		    <!-- /insert_rows -->
@@ -58,9 +65,6 @@
 		        <div class="accordion_row_left_edge_bottom"></div>
 			<div class="accordion_row_right_edge_bottom"></div> 
 			<div class="white_bg_bottom"></div>
-			<div class="black_plus_icon">
-			    <a id="test" onClick="add_row();" class="fill_div"></a>  
-			</div>
 			<div class="accordion_row_text_box"></div>
 		    </div>
 
@@ -71,12 +75,46 @@
 		</div>
         
 		   
-		   <div id="placeholder" ></div>
+		   <div id="placeholder"></div>
+		   
+		   <div class="tab_menu">
+		       <div class="tab_menu_text">Made By <br> Global Data Sciences, Inc.</div>
+		   </div>
+		   
 		</div>
 	</div>
 </body>
  <script type="text/javascript">
+var opts = {
+  lines: 13, // The number of lines to draw
+  length: 20, // The length of each line
+  width: 10, // The line thickness
+  radius: 30, // The radius of the inner circle
+  corners: 1, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#fff', // #rgb or #rrggbb
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: 'auto', // Top position relative to parent in px
+  left: 'auto' // Left position relative to parent in px
+};
+var target = document.getElementById('iphone_4s_spinner');
+var spinner = new Spinner(opts);
+
+$("#search").click(function() {
+    $('#data_table').show();
+    $('#veil').show();
+    spinner.spin(target);
+});
+ 
 $(function () {
+	
+
 
     var dic = {"data point #1":1.23456789};
     var encoded_data = base64.b64encode(json.dumps(dic));
@@ -92,5 +130,15 @@ $(function () {
         }
     );
 });
+
+
+
+
+
+
+
+
+
+
 </script>
 </html>
