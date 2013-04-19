@@ -10,6 +10,16 @@
     background-color: white;
     z-index: 2;
 }
+.white_box_for_graph {
+    position: absolute;
+    top: 530px;
+    left: 70px;
+    width: 500px;
+    height: 220px;
+    background-color: white;
+    z-index: 2;
+    display: none;
+}
 .white_box_gray_border_top_left {
     position: absolute;
     top: -40px;
