@@ -22,11 +22,20 @@ class PycloudMiddleman(tornado.web.RequestHandler):
     def get(s):
         sub = s.get_argument('substring')
         sub = base64.b64decode(str(sub))
-        data = [[0, 3], [1, 8], [3, 5], [4, 13],
+        
+        jids = cloud.call(read_picloud_file)
+        
+        from_cloud = cloud.result(jids)
+        
+        graph_data = [[0, 3], [1, 8], [3, 5], [4, 13],
                 [5, 3], [6, 8], [7, 5], [8, 13],
 				[9, 3], [10, 8], [12, 5], [13, 13]];
+                
+        data_dict = {"graph_data":graph_data}
+        data_dict['total_time'] = from_cloud
+        data_dict['data_processed'] = 987654321
         
-        return s.write(base64.b64encode(json.dumps(data)))
+        return s.write(base64.b64encode(json.dumps(data_dict)))
 
 def read_picloud_file():
     start = time.time()
