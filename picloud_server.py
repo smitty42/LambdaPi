@@ -12,7 +12,7 @@ import tornado.web
 
 from tornado.options import define, options
 
-port = 8888
+port = 80
 os.system('''kill -9 `netstat -nap tcp |
             grep %s |
             awk '{{split ($7, a, "/"); print a[1]}}'`'''%port)
@@ -39,26 +39,37 @@ class PycloudMiddleman(tornado.web.RequestHandler):
         total_computation_time = sum(map(lambda x: x[0],from_cloud))
         graph_data = map(lambda x: [int(x[2]),x[1]],from_cloud)
         first_occurances_in_nodes = map(lambda x: x[3],from_cloud)
-        first_occurance_node = first_occurances_in_nodes.index(next( i for i in first_occurances_in_nodes if i != -1))
-        first_occurance = filter(lambda x: x != -1,first_occurances_in_nodes)[0] + (charicters_in_node * (first_occurance_node + 1))
-        average_node_time = total_computation_time / number_of_nodes
-        total_instances = sum(map(lambda x: x[1],from_cloud))
-        frequency = total_instances / float(charicters_processed)
-        period = 1 / frequency
-        average_instances = total_instances / float(number_of_nodes)
-        average_time_per_node = total_computation_time / float(number_of_nodes)
-        total_time_for_entire_process = end - start
-        
+        if filter(lambda x: x != -1, first_occurances_in_nodes) != []:
+            first_occurance_node = first_occurances_in_nodes.index(next( i for i in first_occurances_in_nodes if i != -1))
+            first_occurance = filter(lambda x: x != -1,first_occurances_in_nodes)[0] + (charicters_in_node * (first_occurance_node + 1))
+            average_node_time = total_computation_time / number_of_nodes
+            total_instances = sum(map(lambda x: x[1],from_cloud))
+            frequency = total_instances / float(charicters_processed)
+            period = 1 / frequency
+            average_instances = total_instances / float(number_of_nodes)
+            average_time_per_node = total_computation_time / float(number_of_nodes)
+            total_time_for_entire_process = end - start
+        else:
+            first_occurance_node = 'N/A'
+            first_occurance = 'N/A'
+            average_node_time = total_computation_time / number_of_nodes
+            total_instances = 0
+            frequency = 0
+            period = 'N/A'
+            average_instances = total_instances / float(number_of_nodes)
+            average_time_per_node = total_computation_time / float(number_of_nodes)
+            total_time_for_entire_process = end - start
 
+        
         data_dict = {}
         data_dict['graph_data'] = graph_data
         data_dict['total_computation_time'] = '%.4e' % total_computation_time
-        data_dict['charicters_processed'] = '%e4' % charicters_processed
+        data_dict['charicters_processed'] = '%e' % charicters_processed
         data_dict['first_occurance'] = first_occurance
         data_dict['average_node_time'] = '%.4e' % average_node_time
         data_dict['total_instances'] = total_instances
         data_dict['frequency'] = frequency
-        data_dict['period'] = int(period)
+        data_dict['period'] = period if type(period) == str else int(period)
         data_dict['average_instances'] = average_instances
         data_dict['average_time_per_node'] = '%.4e' % average_time_per_node
         data_dict['total_time_for_entire_process'] = '%.4e' % total_time_for_entire_process
