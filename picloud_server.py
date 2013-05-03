@@ -26,8 +26,8 @@ class PycloudMiddleman(tornado.web.RequestHandler):
         sub = str(int(sub['substring']))
 
         number_of_nodes = 10
-        charicters_in_node = 10000000 
-        charicters_processed = charicters_in_node * number_of_nodes
+        characters_in_node = 10000000 
+        characters_processed = characters_in_node * number_of_nodes
         nodes = map(lambda x: "%03d" % x,list(xrange(number_of_nodes)))
         args = map(lambda x: [sub,x],nodes)
 
@@ -41,10 +41,10 @@ class PycloudMiddleman(tornado.web.RequestHandler):
         first_occurances_in_nodes = map(lambda x: x[3],from_cloud)
         if filter(lambda x: x != -1, first_occurances_in_nodes) != []:
             first_occurance_node = first_occurances_in_nodes.index(next( i for i in first_occurances_in_nodes if i != -1))
-            first_occurance = filter(lambda x: x != -1,first_occurances_in_nodes)[0] + (charicters_in_node * (first_occurance_node + 1))
+            first_occurance = filter(lambda x: x != -1,first_occurances_in_nodes)[0] + (characters_in_node * (first_occurance_node + 1))
             average_node_time = total_computation_time / number_of_nodes
             total_instances = sum(map(lambda x: x[1],from_cloud))
-            frequency = total_instances / float(charicters_processed)
+            frequency = total_instances / float(characters_processed)
             period = 1 / frequency
             average_instances = total_instances / float(number_of_nodes)
             average_time_per_node = total_computation_time / float(number_of_nodes)
@@ -64,7 +64,7 @@ class PycloudMiddleman(tornado.web.RequestHandler):
         data_dict = {}
         data_dict['graph_data'] = graph_data
         data_dict['total_computation_time'] = '%.4e' % total_computation_time
-        data_dict['charicters_processed'] = '%e' % charicters_processed
+        data_dict['characters_processed'] = '%e' % characters_processed
         data_dict['first_occurance'] = first_occurance
         data_dict['average_node_time'] = '%.4e' % average_node_time
         data_dict['total_instances'] = total_instances
