@@ -1,0 +1,59 @@
+Virtual machine settings
+    * 2048MB ram
+    * 15GB dynamic disc, guided – use entire disk
+    * bridged networking
+    * no auto updates
+    * username: user
+    * password: fjdksla
+
+
+
+Step #1) 
+	Install Ubuntu Server 12.04.1 amd(64bit) into Virtualbox 4
+
+Step #2) 
+	Make sure that openssh-server is installed in the guest machine.
+	If it is not, you can install it with “sudo apt-get install openssh-server”.
+
+Step #3) 
+	Open a terminal (on the host) and login to the guest. On my network the 	guest's IP address is “192.168.0.174” so I used “ssh user@192.1683.0.174”. 	The address will likely be different for you.
+
+Step #4)
+	in the guest run:
+	sudo apt-get install python-pip python-dev build-essential python-support mercurial nginx
+
+
+Step #5)
+	in the guest run:
+	sudo pip install tornado
+
+Step #6)
+	navigate in to /home/user (on the guest)
+	Do hg checkout stuff.
+
+Step #7)
+	CD into picloud_demo/tests and run:
+	python server_test.py
+
+	next, have any browser on the host connect to port 8888 on your 	guests' IP 	address. On my workstation I used “192.168.0.174:8888”. You should see a 	simple “hello would” webpage.
+
+Step #8)
+	Create a picloud account.
+
+Step #9)
+	Download and install picloud.
+	Run: sudo dpkg -i  [most recent picloud.deb file from picloud]. I used “sudo dpkg -i cloud_2.7.6-1_all.deb”
+
+Step #10)
+	run:
+ 	python picloud_test.py
+	
+
+
+
+		
+
+
+cordova project setup:
+
+./create ~/Desktop/picloud_app org.GDS.pcloudapp picloud_app
