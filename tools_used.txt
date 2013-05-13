@@ -1,0 +1,25 @@
+We used these tools to make this iPhone app and it's back-end systems.
+
+OSX 10.8
+Caffeinate
+Xcode 4.3
+Other Apple developer tools (iOS provisioning portal, app signing, physical device deployment)
+HTML5
+CSS
+JavaScript
+Apache Cordova 2.6.0
+jQuery 
+Python Tornado
+Python-pip
+Flot Chart
+Ubuntu 12.04
+spin.js
+Google's jsonParse
+jQuery json Plugin
+jQuery-base64 Plugin
+mercurial (via bitbucket)
+Virtualbox (on OSX and Ubuntu)
+GIMP
+PiCloud
+Unix Utilities (bash, grep, netstat, awk, ssh)
+nginx
