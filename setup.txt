@@ -56,4 +56,4 @@ Step #10)
 
 cordova project setup:
 
-./create ~/Desktop/picloud_app org.GDS.pcloudapp picloud_app
+./create ~/Desktop/picloud_app org.tl.pcloudapp picloud_app
